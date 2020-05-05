@@ -1371,7 +1371,7 @@ class UFF:
                 elif (dset['ord_data_type'] == 4) and (dset['abscissa_spacing'] == 0):
                     for line in split_data:  # 2(E13.5,E20.12)
                         values.extend(
-                            [float(line[13 * (i + j) + 20 * (i):13 * (i + 1) + 20 * (i + j)]) \
+                            [float(line[20 * (i + j) + 20 * (i):20 * (i + 1) + 20 * (i + j)]) \
                              for i in range(len(line) // 33) for j in [0, 1]])
                 elif (dset['ord_data_type'] == 6) and (dset['abscissa_spacing'] == 0):
                     for line in split_data:  # 1E13.5,2E20.12
